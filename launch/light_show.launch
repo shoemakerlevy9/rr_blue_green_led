@@ -1,0 +1,4 @@
+<launch>
+    <node name="led_node" pkg="rr_blue_green_LED" type="arduino_LED_node.py" output="screen"/>
+    <node name="led_controller" pkg="rr_blue_green_LED" type="test_pub.py" output="screen"/>
+</launch>
