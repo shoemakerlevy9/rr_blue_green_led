@@ -21,7 +21,7 @@ def listener():
 
 
 if __name__ == '__main__':
-    ser  = serial.Serial('/dev/ttyACM2')
+    ser  = serial.Serial('/dev/ttyACM0')
     try:
         listener()
     except rospy.ROSInterruptException:
