@@ -15,7 +15,7 @@ def talker():
         msg.data = [0, 0]
         
         # Edit here to change the LED intesity: values between 0 - 255
-        msg.data[BLUE] = 255     # Edit this line to set intensity of Blue light
+        msg.data[BLUE] = 0     # Edit this line to set intensity of Blue light
         msg.data[GREEN] = 255  # Edit this line to set Intesity of Green Light
         
         pub.publish(msg)
