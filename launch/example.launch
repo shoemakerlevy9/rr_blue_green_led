@@ -1,0 +1,9 @@
+<launch>
+
+    <arg name="arduino_LED_node" default="rr_blue_green_LED" />
+
+    <!-- blue_green_LED -->
+    <node pkg="rr_blue_green_LED" type="arduino_LED_node.py" name="$(arg arduino_LED_node)" respawn="false" output="screen">
+        <param name="port" value="/dev/ttyACM1" />
+    </node>
+</launch>

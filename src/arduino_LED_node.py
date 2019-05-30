@@ -15,13 +15,21 @@ def callback(data):
     ser.write(str_to_send.encode())
 
 def listener():
-    rospy.init_node('LED_control_node', anonymous=True)
     rospy.Subscriber("LED_control", Int16MultiArray, callback)
     rospy.spin()
 
 
 if __name__ == '__main__':
-    ser  = serial.Serial('/dev/ttyACM2')
+    rospy.init_node('arduino_LED_node', anonymous=True)
+
+    try:
+        port = rospy.get_param('~/rr_blue_green_LED/port')
+    except:
+        rospy.logerr('please set param ~/rr_blue_green_LED/port...')
+    try:
+        ser  = serial.Serial(port)
+    except:
+        rospy.logerr('cannot connect to MultiMoto, check LED port')
     try:
         listener()
     except rospy.ROSInterruptException:
