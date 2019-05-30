@@ -20,10 +20,11 @@ def listener():
 
 
 if __name__ == '__main__':
+
     rospy.init_node('arduino_LED_node', anonymous=True)
 
     try:
-        port = rospy.get_param('~/rr_blue_green_LED/port')
+        port = rospy.get_param('~/port')
     except:
         rospy.logerr('please set param ~/rr_blue_green_LED/port...')
     try:
