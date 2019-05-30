@@ -4,7 +4,7 @@ import rospy
 from std_msgs.msg import Int16MultiArray
 
 def talker():
-    pub = rospy.Publisher('LED_control', Int16MultiArray, queue_size=10)
+    pub = rospy.Publisher('led_control', Int16MultiArray, queue_size=10)
     rospy.init_node('pub_test', anonymous=True)
     rate = rospy.Rate(10) # 10hz
     while not rospy.is_shutdown():
