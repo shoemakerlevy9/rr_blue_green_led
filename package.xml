@@ -1,25 +1,25 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>rr_blue_green_LED</name>
+  <name>rr_blue_green_led</name>
   <version>0.0.0</version>
-  <description>The LED_control package</description>
+  <description>The rr_blue_green_led package</description>
 
   <!-- One maintainer tag required, multiple allowed, one person per tag -->
   <!-- Example:  -->
   <!-- <maintainer email="jane.doe@example.com">Jane Doe</maintainer> -->
-  <maintainer email="ama@todo.todo">ama</maintainer>
+  <maintainer email="molly@digilabs.io">Amalia Schwartzwald</maintainer>
 
 
   <!-- One license tag required, multiple allowed, one license per tag -->
   <!-- Commonly used license strings: -->
   <!--   BSD, MIT, Boost Software License, GPLv2, GPLv3, LGPLv2.1, LGPLv3 -->
-  <license>TODO</license>
+  <license>BSD</license>
 
 
   <!-- Url tags are optional, but multiple are allowed, one per tag -->
   <!-- Optional attribute type can be: website, bugtracker, or repository -->
   <!-- Example: -->
-  <!-- <url type="website">http://wiki.ros.org/LED_control</url> -->
+  <!-- <url type="website">http://wiki.ros.org/led_control</url> -->
 
 
   <!-- Author tags are optional, multiple are allowed, one per tag -->

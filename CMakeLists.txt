@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(rr_blue_green_LED)
+project(rr_blue_green_led)
 
 find_package(catkin REQUIRED COMPONENTS
   rospy
@@ -21,7 +21,7 @@ find_package(catkin REQUIRED COMPONENTS
 ###################################
 catkin_package(
 #   INCLUDE_DIRS include
-   LIBRARIES LED_control
+   LIBRARIES led_control
    CATKIN_DEPENDS rospy std_msgs
 #  DEPENDS system_lib
 )
@@ -39,7 +39,7 @@ include_directories(
 ## Install ##
 #############
 catkin_install_python(PROGRAMS 
-  scripts/arduino_LED_node.py
+  scripts/arduino_led_node.py
   scripts/test_pub.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
@@ -53,7 +53,7 @@ install(DIRECTORY launch
 #############
 
 ## Add gtest based cpp test target and link libraries
-# catkin_add_gtest(${PROJECT_NAME}-test test/test_LED_control.cpp)
+# catkin_add_gtest(${PROJECT_NAME}-test test/test_led_control.cpp)
 # if(TARGET ${PROJECT_NAME}-test)
 #   target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
 # endif()
