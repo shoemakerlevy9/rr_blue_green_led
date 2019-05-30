@@ -1,5 +1,12 @@
 <launch>
-    <node name="led_node" pkg="rr_blue_green_led" type="arduino_led_node.py" output="screen"/>
-        <param name="port" value="/dev/ttyACM0" />
-    <node name="led_controller" pkg="rr_blue_green_led" type="test_pub.py" output="screen"/>
+
+    <arg name="arduino_led_node" default="rr_blue_green_led" />
+
+    <!-- blue_green_led -->
+    <node pkg="rr_blue_green_led" type="arduino_led_node.py" name="$(arg arduino_led_node)" respawn="false" output="screen">
+        <param name="port" value="/dev/arduino" />
+    </node>
+    
+    <!-- led command node -->
+    <node pkg="rr_blue_green_led" type="test_pub.py" name="$(arg arduino_led_node)_test" respawn="false" output="screen"/>
 </launch>

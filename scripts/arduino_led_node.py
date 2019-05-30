@@ -24,9 +24,10 @@ if __name__ == '__main__':
     rospy.init_node('arduino_led_node', anonymous=True)
 
     try:
-        port = rospy.get_param('~/port')
+        port = rospy.get_param('~port')
     except:
         rospy.logerr('please set param ~/rr_blue_green_led/port...')
+        
     try:
         ser  = serial.Serial(port)
     except:
