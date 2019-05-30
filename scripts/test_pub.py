@@ -9,7 +9,7 @@ def talker():
     rate = rospy.Rate(10) # 10hz
     while not rospy.is_shutdown():
         msg = Int16MultiArray()
-        msg.data = [200,20]
+        msg.data = [2,200]
         pub.publish(msg)
         rate.sleep()
 
